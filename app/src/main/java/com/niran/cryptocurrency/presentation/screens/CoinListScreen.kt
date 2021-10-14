@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavArgument
 import androidx.navigation.NavController
 import com.niran.cryptocurrency.presentation.Screen
 import com.niran.cryptocurrency.presentation.components.CoinListItem
@@ -28,7 +29,9 @@ fun CoinListScreen(
         LazyColumn(modifier = Modifier.fillMaxSize()) {
             items(state.coins) { coin ->
                 CoinListItem(coin = coin, onItemClick = {
-                    navController.navigate(Screen.CoinDetailScreen.route + "/${it.id}")
+                    navController.navigate(route = Screen.CoinDetailScreen.route + "/${it.id}") {
+                        launchSingleTop = true
+                    }
                 })
             }
         }
