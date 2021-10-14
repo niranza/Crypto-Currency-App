@@ -1,18 +1,17 @@
-package com.niran.cryptocurrency.presentation.coin_detail
+package com.niran.cryptocurrency.presentation.viewmodels
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.niran.cryptocurrency.common.Constants
 import com.niran.cryptocurrency.common.Constants.PARAM_COIN_ID
 import com.niran.cryptocurrency.common.Resource
-import com.niran.cryptocurrency.domain.use_cases.get_coin.GetCoinUseCase
+import com.niran.cryptocurrency.domain.use_cases.GetCoinUseCase
+import com.niran.cryptocurrency.presentation.states.CoinDetailState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import timber.log.Timber
 import javax.inject.Inject
 
 @HiltViewModel

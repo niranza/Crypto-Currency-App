@@ -1,6 +1,6 @@
 package com.niran.cryptocurrency.domain.models
 
-import com.niran.cryptocurrency.data.remote.dto.TeamMember
+import com.niran.cryptocurrency.data.remote.responses.coin_detail.TeamMember
 
 data class CoinDetail(
     val coinId: String,

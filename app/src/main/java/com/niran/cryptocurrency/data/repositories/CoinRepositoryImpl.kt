@@ -1,8 +1,8 @@
 package com.niran.cryptocurrency.data.repositories
 
 import com.niran.cryptocurrency.data.remote.CoinPaprikaApi
-import com.niran.cryptocurrency.data.remote.dto.CoinDetailDto
-import com.niran.cryptocurrency.data.remote.dto.CoinDto
+import com.niran.cryptocurrency.data.remote.responses.coin_detail.CoinDetailDto
+import com.niran.cryptocurrency.data.remote.responses.CoinDto
 import com.niran.cryptocurrency.domain.repositories.CoinRepository
 import javax.inject.Inject
 

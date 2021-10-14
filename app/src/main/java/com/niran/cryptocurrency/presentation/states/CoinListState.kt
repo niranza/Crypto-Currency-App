@@ -1,4 +1,4 @@
-package com.niran.cryptocurrency.presentation.coin_list
+package com.niran.cryptocurrency.presentation.states
 
 import com.niran.cryptocurrency.domain.models.Coin
 

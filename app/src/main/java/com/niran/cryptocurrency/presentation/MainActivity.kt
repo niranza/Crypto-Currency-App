@@ -8,10 +8,9 @@ import androidx.compose.material.Surface
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.niran.cryptocurrency.common.Constants
 import com.niran.cryptocurrency.common.Constants.PARAM_COIN_ID
-import com.niran.cryptocurrency.presentation.coin_detail.CoinDetailScreen
-import com.niran.cryptocurrency.presentation.coin_list.CoinListScreen
+import com.niran.cryptocurrency.presentation.screens.CoinDetailScreen
+import com.niran.cryptocurrency.presentation.screens.CoinListScreen
 import com.niran.cryptocurrency.presentation.ui.theme.CryptoCurrencyTheme
 import dagger.hilt.android.AndroidEntryPoint
 

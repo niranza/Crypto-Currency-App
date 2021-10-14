@@ -1,4 +1,4 @@
-package com.niran.cryptocurrency.presentation.coin_detail.components
+package com.niran.cryptocurrency.presentation.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -10,7 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
-import com.niran.cryptocurrency.data.remote.dto.TeamMember
+import com.niran.cryptocurrency.data.remote.responses.coin_detail.TeamMember
 
 @Composable
 fun TeamListItem(

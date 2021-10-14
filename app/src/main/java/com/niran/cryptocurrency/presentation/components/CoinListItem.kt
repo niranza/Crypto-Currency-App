@@ -1,4 +1,4 @@
-package com.niran.cryptocurrency.presentation.coin_list.components
+package com.niran.cryptocurrency.presentation.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement

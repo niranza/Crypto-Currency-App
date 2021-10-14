@@ -1,11 +1,12 @@
-package com.niran.cryptocurrency.presentation.coin_list
+package com.niran.cryptocurrency.presentation.viewmodels
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.niran.cryptocurrency.common.Resource
-import com.niran.cryptocurrency.domain.use_cases.get_coins.GetCoinsUseCase
+import com.niran.cryptocurrency.domain.use_cases.GetCoinsUseCase
+import com.niran.cryptocurrency.presentation.states.CoinListState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach

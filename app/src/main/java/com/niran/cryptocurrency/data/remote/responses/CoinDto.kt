@@ -1,4 +1,4 @@
-package com.niran.cryptocurrency.data.remote.dto
+package com.niran.cryptocurrency.data.remote.responses
 
 
 import com.google.gson.annotations.SerializedName

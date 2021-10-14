@@ -1,7 +1,7 @@
 package com.niran.cryptocurrency.domain.repositories
 
-import com.niran.cryptocurrency.data.remote.dto.CoinDetailDto
-import com.niran.cryptocurrency.data.remote.dto.CoinDto
+import com.niran.cryptocurrency.data.remote.responses.coin_detail.CoinDetailDto
+import com.niran.cryptocurrency.data.remote.responses.CoinDto
 
 interface CoinRepository {
 

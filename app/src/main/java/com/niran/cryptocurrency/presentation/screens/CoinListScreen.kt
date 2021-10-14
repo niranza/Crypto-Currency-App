@@ -1,4 +1,4 @@
-package com.niran.cryptocurrency.presentation.coin_list
+package com.niran.cryptocurrency.presentation.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -14,7 +14,8 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.niran.cryptocurrency.presentation.Screen
-import com.niran.cryptocurrency.presentation.coin_list.components.CoinListItem
+import com.niran.cryptocurrency.presentation.components.CoinListItem
+import com.niran.cryptocurrency.presentation.viewmodels.CoinListViewModel
 
 @Composable
 fun CoinListScreen(

@@ -1,6 +1,5 @@
-package com.niran.cryptocurrency.presentation.coin_detail
+package com.niran.cryptocurrency.presentation.screens
 
-import android.content.Context
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -17,8 +16,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.google.accompanist.flowlayout.FlowRow
-import com.niran.cryptocurrency.presentation.coin_detail.components.CoinTag
-import com.niran.cryptocurrency.presentation.coin_detail.components.TeamListItem
+import com.niran.cryptocurrency.presentation.components.CoinTag
+import com.niran.cryptocurrency.presentation.components.TeamListItem
+import com.niran.cryptocurrency.presentation.viewmodels.CoinDetailViewModel
 
 @Composable
 fun CoinDetailScreen(
