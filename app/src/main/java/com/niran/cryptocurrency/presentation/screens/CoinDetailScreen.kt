@@ -40,7 +40,7 @@ fun CoinDetailScreen(
                         Text(
                             text = "${coin.rank}. ${coin.name} (${coin.symbol})",
                             style = MaterialTheme.typography.h2,
-                            modifier = Modifier.weight(8f)
+                            modifier = Modifier.weight(6f)
                         )
                         Text(
                             text = if (coin.isActive) "active" else "inactive",
@@ -49,7 +49,7 @@ fun CoinDetailScreen(
                             textAlign = TextAlign.End,
                             modifier = Modifier
                                 .align(CenterVertically)
-                                .weight(2f)
+                                .weight(1f)
                         )
                     }
                     Spacer(modifier = Modifier.height(15.dp))

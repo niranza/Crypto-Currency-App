@@ -33,7 +33,9 @@ fun CoinListItem(
         Text(
             text = "${coin.rank}. ${coin.name} (${coin.symbol})",
             style = MaterialTheme.typography.body1,
-            overflow = TextOverflow.Ellipsis
+            overflow = TextOverflow.Ellipsis,
+            maxLines = 1,
+            modifier = Modifier.weight(6f)
         )
         Text(
             text = if (coin.isActive) "active" else "inactive",
@@ -41,7 +43,9 @@ fun CoinListItem(
             fontStyle = FontStyle.Italic,
             textAlign = TextAlign.End,
             style = MaterialTheme.typography.body2,
-            modifier = Modifier.align(CenterVertically)
+            modifier = Modifier
+                .align(CenterVertically)
+                .weight(1f)
         )
     }
 
