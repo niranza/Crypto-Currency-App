@@ -43,8 +43,12 @@ fun CoinDetailScreen(
                             modifier = Modifier.weight(6f)
                         )
                         Text(
-                            text = if (coin.isActive) "active" else "inactive",
-                            color = if (coin.isActive) Color.Green else Color.Red,
+                            text = when (coin.isActive) {
+                                true -> "active"
+                                false -> "inactive"
+                                else -> ""
+                            },
+                            color = if (coin.isActive == true) Color.Green else Color.Red,
                             fontStyle = FontStyle.Italic,
                             textAlign = TextAlign.End,
                             modifier = Modifier

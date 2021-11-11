@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 import com.niran.cryptocurrency.domain.models.CoinDetail
 
 data class CoinDetailDto(
-    val description: String,
+    val description: String?,
     @SerializedName("development_status")
     val developmentStatus: String,
     @SerializedName("first_data_at")
@@ -16,7 +16,7 @@ data class CoinDetailDto(
     val hashAlgorithm: String,
     val id: String,
     @SerializedName("is_active")
-    val isActive: Boolean,
+    val isActive: Boolean?,
     @SerializedName("is_new")
     val isNew: Boolean,
     @SerializedName("last_data_at")
@@ -25,22 +25,22 @@ data class CoinDetailDto(
     @SerializedName("links_extended")
     val linksExtended: List<LinksExtended>,
     val message: String,
-    val name: String,
+    val name: String?,
     @SerializedName("open_source")
     val openSource: Boolean,
     @SerializedName("org_structure")
     val orgStructure: String,
     @SerializedName("proof_type")
     val proofType: String,
-    val rank: Int,
+    val rank: Int?,
     @SerializedName("started_at")
     val startedAt: String,
-    val symbol: String,
+    val symbol: String?,
     val tags: List<Tag>?,
     val team: List<TeamMember>?,
     val type: String,
     val whitepaper: Whitepaper
 ) {
     fun toCoinDetail() =
-        CoinDetail(id, name, description, symbol, rank, isActive, tags?.map { it.name }, team)
+        CoinDetail(id, name ?: "", description ?: "", symbol ?: "", rank, isActive, tags?.map { it.name }, team)
 }

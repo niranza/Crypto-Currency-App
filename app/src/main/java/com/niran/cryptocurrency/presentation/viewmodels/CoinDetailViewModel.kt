@@ -17,14 +17,14 @@ import javax.inject.Inject
 @HiltViewModel
 class CoinDetailViewModel @Inject constructor(
     private val getCoinUseCase: GetCoinUseCase,
-    safeStateHandle: SavedStateHandle
+    savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
     private val _state = mutableStateOf(CoinDetailState())
     val state: State<CoinDetailState> get() = _state
 
     init {
-        safeStateHandle.get<String>(PARAM_COIN_ID)?.let { coinId ->
+        savedStateHandle.get<String>(PARAM_COIN_ID)?.let { coinId ->
             getCoin(coinId)
         }
     }
