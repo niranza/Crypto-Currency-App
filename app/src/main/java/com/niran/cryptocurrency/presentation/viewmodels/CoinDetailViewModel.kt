@@ -7,15 +7,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.niran.cryptocurrency.common.Constants.PARAM_COIN_ID
 import com.niran.cryptocurrency.common.Resource
+import com.niran.cryptocurrency.common.extensions.launchOnce
 import com.niran.cryptocurrency.domain.use_cases.GetCoinUseCase
 import com.niran.cryptocurrency.presentation.states.CoinDetailState
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.cancel
-import kotlinx.coroutines.currentCoroutineContext
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onCompletion
-import kotlinx.coroutines.flow.onEach
-import timber.log.Timber
 import javax.inject.Inject
 
 @HiltViewModel
@@ -33,14 +28,12 @@ class CoinDetailViewModel @Inject constructor(
         }
     }
 
-    private fun getCoin(coinId: String) = getCoinUseCase(coinId).onEach { result ->
-        when (result) {
-            is Resource.Loading -> _state.value = CoinDetailState(isLoading = true)
-            is Resource.Success -> _state.value = CoinDetailState(coin = result.data)
-            is Resource.Error -> _state.value = CoinDetailState(error = result.message)
+    private fun getCoin(coinId: String) =
+        getCoinUseCase(coinId).launchOnce(viewModelScope) { result ->
+            when (result) {
+                is Resource.Loading -> _state.value = CoinDetailState(isLoading = true)
+                is Resource.Success -> _state.value = CoinDetailState(coin = result.data)
+                is Resource.Error -> _state.value = CoinDetailState(error = result.message)
+            }
         }
-    }.onCompletion {
-        Timber.d("onCompletion called")
-        currentCoroutineContext().cancel()
-    }.launchIn(viewModelScope)
 }
